@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09/03/2024 às 21:32
+-- Tempo de geração: 18/03/2024 às 00:52
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -40,6 +40,17 @@ CREATE TABLE `login` (
 INSERT INTO `login` (`id`, `email`, `senha`) VALUES
 (1, 'adm@gmail.com', '123');
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `professores`
+--
+
+CREATE TABLE `professores` (
+  `rm` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Índices para tabelas despejadas
 --
@@ -49,6 +60,12 @@ INSERT INTO `login` (`id`, `email`, `senha`) VALUES
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `professores`
+--
+ALTER TABLE `professores`
+  ADD PRIMARY KEY (`rm`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas

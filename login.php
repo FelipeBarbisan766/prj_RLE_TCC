@@ -10,18 +10,20 @@
           <div class="card-body p-5 text-center">
             <div class="mb-md-5 mt-md-4 pb-5">
               <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-              <p class="text-white-50 mb-5">Porfavor coloque seu E-mail e Senha</p>
+              <p class="text-white-50 mb-5">Porfavor coloque seu Usuário e Senha</p>
               <form action="" method="POST">
               <div class="form-outline form-white mb-4">
                 <input type="email" name="txt_email" id="typeEmailX" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX">E-mail</label>
+                <label class="form-label" for="typeEmailX">Usuário</label>
               </div>
               <div class="form-outline form-white mb-4">
                 <input type="password" name="txt_senha" id="typePasswordX" class="form-control form-control-lg" />
                 <label class="form-label" for="typePasswordX">Senha</label>
               </div>
               <button class="btn btn-outline-light btn-lg px-5" type="submit">Entrar</button>
+              <br>
             </div>
+            <p class="text-white-50 mb-5">Se registre aqui<a href="professores.php"> Registre-se</a></p>
 <?php
     include('conexao.php');
     
@@ -59,7 +61,7 @@
           $_SESSION['id'] = $usuario['id'];
           $_SESSION['email'] = $usuario['email'];
           
-          header('Location: index.html');
+          header('Location: index.php');
           
         }else{
           echo'<div class="alert alert-danger" role="alert">
@@ -81,20 +83,3 @@
 
 </body>
 </html>
-<!-- <main class="form-signin w-100 m-auto">
-      <form action="login.php" method="POST">
-
-      <h1 class="h3 mb-3 fw-normal">Entrar</h1>
-
-      <div class="form-floating">
-      <input name="txt_email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Usuário</label>
-      </div>
-      <div class="form-floating">
-      <input name="txt_senha" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Senha</label>
-      </div>
-
-      <button class="btn btn-primary w-100 py-2" type="submit"></button>
-  </form>
-</main> -->
